@@ -9,8 +9,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
         <module name="gateWay" />
-        <module name="student" />
         <module name="school" />
+        <module name="student" />
         <module name="discovery" />
       </profile>
     </annotationProcessing>

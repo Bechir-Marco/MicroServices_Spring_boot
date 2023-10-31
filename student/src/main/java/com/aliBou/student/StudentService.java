@@ -1,4 +1,4 @@
-package com.aliBou.student;
+package com.alibou.student;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -11,7 +11,7 @@ public class StudentService {
 
     private final StudentRepository repository;
 
-    public void saveStudent (Student student) {
+    public void saveStudent(Student student) {
         repository.save(student);
     }
 

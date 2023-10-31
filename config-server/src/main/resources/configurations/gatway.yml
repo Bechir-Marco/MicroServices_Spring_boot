@@ -6,8 +6,6 @@ server:
 spring:
   application:
     name: gateway
-  config:
-    import: optional:configserver:http://localhost:8888
   cloud:
     gateway:
       discovery:
@@ -17,8 +15,13 @@ spring:
         - id: students
           uri: http://localhost:8090
           predicates:
-            Path=/api/v1/students/**
+            - Path=/api/v1/students/**
         - id: schools
           uri: http://localhost:8070
           predicates:
-            Path=/api/v1/schools/**
+            - Path=/api/v1/schools/**
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
